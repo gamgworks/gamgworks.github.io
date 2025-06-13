@@ -8,18 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="images/header.png" alt="ヘッダー画像" class="header-img">
-  </header>
- 
-  <nav class="site-nav">
-    <ul>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="works.html">WORKS</a></li>
-      <li><a href="https://note.com/gntk" target="_blank" rel="noopener">DIARY</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
+  <div id="header"></div>
   
 
   <div class="container">
@@ -54,6 +43,15 @@
 </body>
 
 <script>
+  // 共通パーツ読み込み（簡易版）
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('header').innerHTML = data);
+
+  // fetch('footer.html')
+  //   .then(res => res.text())
+  //   .then(data => document.getElementById('footer').innerHTML = data);
+
   const modal = document.getElementById("modal");
   const openBtn = document.getElementById("openModal");
   const closeBtn = document.getElementById("closeModal");
