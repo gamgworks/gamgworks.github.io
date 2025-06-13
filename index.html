@@ -35,6 +35,46 @@
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
+    /* モーダル背景 */
+    .modal {
+      display: none; /* 初期状態で非表示 */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6); /* 背景を暗くする */
+    }
+    /* モーダルの中身 */
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease;
+    }
+    /* 閉じるボタン */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #000;
+    }
+
+    /* フェードインアニメーション */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
 
     h1 {
       font-size: 2.5rem;
@@ -69,8 +109,20 @@
   </header>
   
   <div class="container">
-    <p>お世話になっております。<a>自動車 原付</a>と申します。</p>
+    <p>お世話になっております。<a href="#" id="openModal">自動車 原付</a>と申します。</p>
     <p>楽曲の魅力を引き立てる映像を作ります。</p>
+  </div>
+
+  <!-- モーダルの本体 -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h1>自動車 原付</h1>
+      <p>新潟県出身大阪府在住。</p>
+      <p>2016年にモーショングラフィックスを中心とした映像制作活動をスタート。MVや背景映像など、音楽作品の魅力を引き立てるような映像制作・演出を行う。関西を中心にVJとしても活動している。</p>
+      <p>また、映像系個人サークル「G.A.M.G.WORKS」を2019年に開始。映像素材・VJ素材の頒布を行う。</p>
+      <p>キャラクターイラストとモーショングラフィックス技術を用いた映像作品を「女の子とモーショングラフィックス」と勝手に呼称し、日夜収集と研究に勤しむオタクでもある。</p>
+    </div>
   </div>
 
 
@@ -78,4 +130,26 @@
     &copy; 2025 G.A.M.G.WORKS
   </footer>
 </body>
+
+<script>
+  const modal = document.getElementById("modal");
+  const openBtn = document.getElementById("openModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  openBtn.onclick = function(e) {
+    e.preventDefault(); // リンク動作を防ぐ
+    modal.style.display = "block";
+  }
+
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
 </html>
