@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>G.A.M.G.WORKS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header"></div>
+  
+
+  <div class="container">
+    <p>「GAMG月報」として、毎月noteを更新しています。</p>
+    <a href="https://note.com/gntk" target="_blank" rel="noopener">noteに移動</a>
+  </div>
+
+  <div id="footer"></div>
+</body>
+
+<script>
+  // 共通パーツ読み込み（簡易版）
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('header').innerHTML = data);
+
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+
+</script>
+
+</html>
