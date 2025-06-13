@@ -35,6 +35,14 @@
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
+    .container2 {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #efefef;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
     /* モーダル背景 */
     .modal {
       display: none; /* 初期状態で非表示 */
@@ -63,6 +71,14 @@
       align-items: flex-start;
       gap: 20px;
       flex-wrap: wrap; /* スマホでも対応 */
+      text-align: center;
+    }
+    .profile-text {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap; /* スマホでも対応 */
+      text-align: left;
     }
 
     .profile-img {
@@ -97,29 +113,27 @@
       margin-bottom: 10px;
     }
 
-    ch1 {
-      font-size: 2.5rem;
+    h2 {
+      font-size: 1.5rem;
       color: #eb6112;
       margin-bottom: 10px;
-      text-align: center;
     }
     
-    ch2 {
+    h3 {
       font-size: 1.5rem;
       margin-bottom: 10px;
-      text-align: center;
     }
 
     p {
       font-size: 1.1rem;
     }
 
-    link {
+    a {
       color: #eb6112;
       text-decoration: none;
     }
 
-    link:hover {
+    a:hover {
       text-decoration: underline;
     }
 
@@ -137,8 +151,11 @@
   </header>
   
   <div class="container">
-    <p>お世話になっております。<link href="#" id="openModal">自動車 原付</link>と申します。</p>
+    <p>お世話になっております。<a href="#" id="openModal">自動車 原付</link>と申します。</p>
     <p>楽曲の魅力を引き立てる映像を作ります。</p>
+  </div>
+  <div class="container2">
+    <p>ご相談の際は<link>powerofsoy00@gmail.com</link>までご連絡ください。</p>
   </div>
 
   <!-- モーダルの本体 -->
@@ -146,11 +163,10 @@
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
       <div class="profile-box">
-      
+        <h1>プロフィール</h1>
+        <img src="images/gntk_icon.png" alt="プロフィール画像" class="profile-img">
+        <h2>自動車 原付</h2>
         <div class="profile-text">
-          <ch1>プロフィール</ch1>
-          <img src="images/gntk_icon.png" alt="プロフィール画像" class="profile-img">
-          <ch2>自動車 原付</ch2>
           <p>新潟県出身大阪府在住。</p>
           <p>2016年にモーショングラフィックスを中心とした映像制作活動をスタート。MVや背景映像など、音楽作品の魅力を引き立てるような映像制作・演出を行う。関西を中心にVJとしても活動している。</p>
           <p>また、映像系個人サークル「G.A.M.G.WORKS」を2019年に開始。映像素材・VJ素材の頒布を行う。</p>
