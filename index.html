@@ -58,6 +58,21 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
       animation: fadeIn 0.3s ease;
     }
+    .profile-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap; /* スマホでも対応 */
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
     /* 閉じるボタン */
     .close {
       color: #aaa;
@@ -117,11 +132,16 @@
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeModal">&times;</span>
-      <h1>自動車 原付</h1>
-      <p>新潟県出身大阪府在住。</p>
-      <p>2016年にモーショングラフィックスを中心とした映像制作活動をスタート。MVや背景映像など、音楽作品の魅力を引き立てるような映像制作・演出を行う。関西を中心にVJとしても活動している。</p>
-      <p>また、映像系個人サークル「G.A.M.G.WORKS」を2019年に開始。映像素材・VJ素材の頒布を行う。</p>
-      <p>キャラクターイラストとモーショングラフィックス技術を用いた映像作品を「女の子とモーショングラフィックス」と勝手に呼称し、日夜収集と研究に勤しむオタクでもある。</p>
+      <div class="profile-box">
+      <img src="gntk_icon.png" alt="プロフィール画像" class="profile-img">
+      
+      <div class="profile-text">
+        <h1>プロフィール</h1>
+        <p>新潟県出身大阪府在住。</p>
+        <p>2016年にモーショングラフィックスを中心とした映像制作活動をスタート。MVや背景映像など、音楽作品の魅力を引き立てるような映像制作・演出を行う。関西を中心にVJとしても活動している。</p>
+        <p>また、映像系個人サークル「G.A.M.G.WORKS」を2019年に開始。映像素材・VJ素材の頒布を行う。</p>
+        <p>キャラクターイラストとモーショングラフィックス技術を用いた映像作品を「女の子とモーショングラフィックス」と勝手に呼称し、日夜収集と研究に勤しむオタクでもある。</p>
+      </div>
     </div>
   </div>
 
