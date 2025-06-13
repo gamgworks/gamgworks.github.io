@@ -20,7 +20,8 @@ header {
   object-fit: cover;
 }
 .img {
-  max-width: 600px;
+  max-width: 100%;
+  width: 600px;
   height: auto;
   margin: auto;
   border-radius: 12px;
@@ -81,6 +82,7 @@ header {
 
 .profile-img {
   width: 300px;
+  max-width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
