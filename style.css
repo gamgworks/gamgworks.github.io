@@ -103,8 +103,9 @@ header {
 
 /* ナビゲーションメニュー */
 .site-nav {
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   padding: 15px 0;
+  border-radius: 12px;
   text-align: center;
 }
 
@@ -130,7 +131,7 @@ header {
 .button-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007acc;
+  background-color: #eb6112;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -138,7 +139,7 @@ header {
   transition: background-color 0.3s;
 }
 .button-link:hover {
-  background-color: #005fa3;
+  background-color: #db4110;
 }
 
 /* フェードインアニメーション */
@@ -151,6 +152,7 @@ h1 {
   font-size: 2.5rem;
   color: #eb6112;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 h2 {
