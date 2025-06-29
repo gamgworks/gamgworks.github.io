@@ -109,6 +109,8 @@ header {
   height: auto;
   border-radius: 12px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .site-nav ul {
